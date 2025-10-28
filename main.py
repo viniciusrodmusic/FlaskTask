@@ -82,10 +82,7 @@ def home():
     return render_template("home.html", tarefas=resposta)
 
 
-
-
-
-
+9
 
 
 

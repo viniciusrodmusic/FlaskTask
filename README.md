@@ -58,10 +58,6 @@ python main.py
 
 5. Acesse http://localhost:5000 no navegador
 
-## Limitações Conhecidas
-
-⚠️ **Aviso**: Este aplicativo não está otimizado para dispositivos móveis. A interface atual é projetada apenas para desktop.
-
 ## Funcionalidades do Banco de Dados
 
 - Tabela `tarefas`:
