@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    background-image: radial-gradient(skyblue, rgb(42, 72, 84));
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 10px;
+}
+
+.tabela {
+    background-color: azure;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.tabela td, th {
+    outline: 1px solid steelblue;
+    padding: 10px;
+}
+
+
+
+.form-tarefa input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.form-tarefa input:hover {
+    background-color: slategrey;
+}
+
+a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
+ .submit-btn {
+    cursor: pointer;
+ }
+
+ .delete-btn {
+    background-color: lightcoral;
+    outline: 1px solid darkred;
+    color: darkred;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+ }
+
+ .delete-btn:hover {
+    background-color: darkred;
+    color: lightcoral;
+ }
+
+
+ .edit-btn {
+    background-color: lightgoldenrodyellow;
+    outline: 1px solid orangered;
+    color: orangered;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%;
+
+ }
+
+ .edit-btn:hover {
+    background-color: orangered;
+    color: lightgoldenrodyellow;
+ }
+
+.change-task {
+    background-color: antiquewhite;
+    color: orangered;
+    cursor: pointer;
+}
+
+.change-task:hover {
+    background-color: orangered;
+    color: antiquewhite;
+}
+/* ESTILIZAÇÃO DOS FLASH MESSAGE */
+ .info-msg {
+    position: absolute;
+    top: 10px;
+    background-color: lightcoral; 
+    outline: 1px solid darkred; 
+    padding: 10px; 
+    border-radius: 10px;
+    overflow-x: hidden;
+    transition: 0.2s;
+    box-shadow: -5px 5px 5px rgba(0,0,0,0.2);
+ }
+
+  .success-msg {
+    position: absolute;
+    top: 10px;
+    background-color: lightgreen; 
+    outline: 1px solid darkgreen; 
+    padding: 10px; 
+    border-radius: 10px;
+    overflow-x: hidden;
+    transition: 0.2s;
+    box-shadow: -5px 5px 5px rgba(0,0,0,0.2);
+ }
+
+
+ /* BARRINHA DE DURAÇÃO DO FLASH */
+ .msg-countdown {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: darkred;
+    height: 10%;
+    animation: msg-delay 4.1s linear;
+ }
+
+  .success-countdown {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: darkgreen;
+    height: 10%;
+    animation: msg-delay 4.1s linear;
+ }
+/* -------------------------------- */
+ @keyframes msg-delay {
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+
+ }
+
+ /* Página de Edit */
+ .edit-table {
+    background-color: darkslategrey;
+    padding: 20px;
+    color: azure;
+ }
+
+ .edit-form input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgoldenrodyellow;
+ }
+
+ .edit-form input:focus {
+    outline: 2px dotted black;
+ }
+
+
+
+ footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: slategray;
+ }
+
+ footer a {
+    color: azure;
+ }
+
+ footer a:hover {
+    color: skyblue;
+ }

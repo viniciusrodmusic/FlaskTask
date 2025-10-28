@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <table class="edit-table">
+        <tr>
+            <th>Novo nome da tarefa:</th>
+        </tr>
+
+        <tr>
+            <td>
+                <form class="edit-form" action="{{ url_for('edit', id=id) }}" method="POST">
+                    <input type="text" name="tarefa_nova">
+                    <input class="change-task" type="submit" value="Alterar">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

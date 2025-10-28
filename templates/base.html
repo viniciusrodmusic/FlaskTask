@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang=pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo with Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+   
+</head>
+<body>
+
+    <main>
+        <h1>ToDo with Flask + <span style="color: rgb(28, 93, 146);">My</span><span style="color: coral; text-shadow: 1px 1px 20px darkred;">SQL</span></h1>
+        
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <small class="footer-info">Feito por <a class="github-link" href="https://github.com/viniciusrodmusic">@viniciusrodmusic</a></small>
+    </footer>
+</body>
+</html>

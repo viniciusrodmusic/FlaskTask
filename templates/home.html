@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<form class="form-tarefa" method="POST">
+    <input type="text" placeholder="Nome da tarefa" name="nome_tarefa">
+    <input class="submit-btn" type="submit" value="Adicionar">
+</form>
+
+<table class="tabela">
+    <tr>
+        <th>Tarefa</th>
+        <th>Data de Criação</th>
+        <th>Ações</th>
+    </tr>
+    {% for tarefa in tarefas %}
+    <tr>
+        <td>{{ tarefa[1] }}</td>
+        <td>{{ tarefa[2] }}</td>
+        <td>
+                                <!-- AÇÕES -->
+            <form action="{{ url_for('delete', id=tarefa[0]) }}">
+                <input class="delete-btn" type="submit" value="Remover">
+            </form>
+
+            <form action="{{ url_for('edit', id=tarefa[0]) }}">
+                <input class="edit-btn" type="submit" value="Editar">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% with info = get_flashed_messages(category_filter=["info"]) %}
+    {% if info %}
+        {% for msg in info %}
+            <span class="info-msg">
+                <h3 style="color: darkred;">{{ msg }}</h3>
+                <div class="msg-countdown"></div>
+            </span>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+{% with success = get_flashed_messages(category_filter=["success"]) %}
+    {% if success %}
+            {% for msg in success %}
+            <span class="success-msg">
+                <h3 style="color: darkgreen;">{{ msg }}</h3>
+                <div class="success-countdown"></div>
+            </span>
+            {% endfor %}
+    {% endif %}
+
+{% endwith %}
+
+{% endblock %}
