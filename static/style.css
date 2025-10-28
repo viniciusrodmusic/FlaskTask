@@ -62,6 +62,7 @@ a:hover {
     padding: 5px;
     cursor: pointer;
     transition: 0.2s;
+    width: 100%;
  }
 
  .delete-btn:hover {
@@ -190,4 +191,34 @@ a:hover {
 
  footer a:hover {
     color: skyblue;
+ }
+
+ /* RESPONSIVIDADE */
+ @media (min-width: 433px) and (max-width: 768px)  {
+   .tabela {
+      width: 70vw;
+   }
+ }
+
+ @media (max-width: 432px) {
+
+   h1 {
+      font-size: 7vw;
+   }
+
+   .tabela {
+      padding: 5px;
+      width: 80vw;
+      height: 30vw;
+      font-size: 4vw;
+   }
+
+   .tabela td, th {
+      padding: 5px;
+   }
+
+   .delete-btn, .edit-btn {
+      font-size: 2vw;
+   }
+
  }
