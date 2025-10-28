@@ -1,6 +1,7 @@
 # Todo List Flask
 
-Um aplicativo simples de lista de tarefas construído com Flask e MySQL.
+Uma aplicação web para organização de tarefas construído com Flask e MySQL.
+( Sem autenticação )
 
 ![Screenshot do Projeto](static/print.png)
 
@@ -9,7 +10,7 @@ Um aplicativo simples de lista de tarefas construído com Flask e MySQL.
 - Criar tarefas
 - Editar tarefas existentes
 - Remover tarefas
-- Limite máximo de 7 tarefas
+- Limite máximo de 5 tarefas
 - Notificações com fade out automático
 
 ## Tecnologias Utilizadas
