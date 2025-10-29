@@ -28,12 +28,9 @@ try:
         host="mainline.proxy.rlwy.net",
         user="root",
         password="SBKohIsjOuOidCTezvDWBPntlpvzPbBP",
-        database="railway"
+        database="railway",
+        port="43565"
     )
-
-    cursor = conexao.cursor()
-    cursor.execute(criar_tabela)
-    cursor.close()
 
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -42,7 +39,10 @@ except mysql.connector.Error as err:
         print("O banco de dados não existe")
 
 
-sleep(4)
+cursor = conexao.cursor()
+cursor.execute(criar_tabela)
+cursor.close()
+
 
 
 
