@@ -3,7 +3,7 @@ import mysql.connector
 from mysql.connector import errorcode
 from datetime import datetime
 import os
-
+from time import sleep
 
 criar_tabela = (
     """
@@ -30,6 +30,11 @@ try:
         password="SBKohIsjOuOidCTezvDWBPntlpvzPbBP",
         database="railway"
     )
+
+    cursor = conexao.cursor()
+    cursor.execute(criar_tabela)
+    cursor.close()
+
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
         print("Algo está errado com seu usuário ou senha")
@@ -37,10 +42,7 @@ except mysql.connector.Error as err:
         print("O banco de dados não existe")
 
 
-cursor = conexao.cursor()
-cursor.execute(criar_tabela)
-cursor.close()
-
+sleep(4)
 
 
 
