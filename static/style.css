@@ -4,19 +4,21 @@
     box-sizing: border-box;
 }
 
+html, body {
+   height: 100%;
+}
+
 body {
     font-family: sans-serif;
-    min-height: 100vh;
     background-image: radial-gradient(skyblue, rgb(42, 72, 84));
 }
 
 main {
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    padding: 20px 0px;
     gap: 10px;
 }
 
@@ -178,12 +180,12 @@ a:hover {
 
 
  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: black;
-    color: slategray;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   background-color: black;
+   color: slategray;
  }
 
  footer a {

@@ -21,6 +21,14 @@ DB_PASSWORD = os.environ.get("MYSQLPASSWORD")
 DB_NAME = os.environ.get("MYSQL_DATABASE")
 DB_PORT = os.environ.get("MYSQLPORT")
 
+# VIA XAMPP
+# try:
+#     conexao = mysql.connector.connect(
+#         host="localhost",
+#         user="root",
+#         password="",
+#         database="todo_flask",
+#     )
 
 # Conectando-se ao banco MySQL
 try:
@@ -31,6 +39,8 @@ try:
         database=DB_NAME,
         port=DB_PORT
     )
+
+
 
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
