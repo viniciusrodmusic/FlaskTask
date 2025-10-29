@@ -25,10 +25,10 @@ DB_NAME = os.environ.get("MYSQL_DATABASE")
 # Conectando-se ao banco MySQL
 try:
     conexao = mysql.connector.connect(
-        host=DB_HOST,
-        user=DB_USER,
-        password=DB_PASSWORD,
-        database=DB_NAME
+        host="mysql.railway.internal",
+        user="root",
+        password="SBKohIsjOuOidCTezvDWBPntlpvzPbBP",
+        database="railway"
     )
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
