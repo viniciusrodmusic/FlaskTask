@@ -195,12 +195,21 @@ a:hover {
 
  /* RESPONSIVIDADE */
  @media (min-width: 433px) and (max-width: 768px)  {
+
+   main {
+      height: auto;
+   }
+
    .tabela {
       width: 70vw;
    }
  }
 
  @media (max-width: 432px) {
+
+   main {
+      height: auto;
+   }
 
    h1 {
       font-size: 7vw;
