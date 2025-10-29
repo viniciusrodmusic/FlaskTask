@@ -198,6 +198,7 @@ a:hover {
 
    main {
       height: auto;
+      justify-content: flex-start;
    }
 
    .tabela {
@@ -209,6 +210,7 @@ a:hover {
 
    main {
       height: auto;
+      justify-content: flex-start;
    }
 
    h1 {
