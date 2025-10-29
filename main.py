@@ -16,7 +16,7 @@ criar_tabela = (
 )
 
 # CREDENCIAIS DO RAILWAY
-DB_HOST = os.environ.get("MYSQLHOST")
+DB_HOST = os.environ.get("MYSQL_URL")
 DB_USER = os.environ.get("MYSQLUSER")
 DB_PASSWORD = os.environ.get("MYSQLPASSWORD")
 DB_NAME = os.environ.get("MYSQL_DATABASE")
@@ -25,7 +25,7 @@ DB_NAME = os.environ.get("MYSQL_DATABASE")
 # Conectando-se ao banco MySQL
 try:
     conexao = mysql.connector.connect(
-        host="mysql.railway.internal",
+        host="mysql://root:SBKohIsjOuOidCTezvDWBPntlpvzPbBP@mysql.railway.internal:3306/railway",
         user="root",
         password="SBKohIsjOuOidCTezvDWBPntlpvzPbBP",
         database="railway"
@@ -88,7 +88,6 @@ def home():
     return render_template("home.html", tarefas=resposta)
 
 
-9
 
 
 
