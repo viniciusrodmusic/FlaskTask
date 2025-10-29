@@ -15,7 +15,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: auto;
+    padding: 20px 0px;
     gap: 10px;
 }
 
@@ -196,10 +197,6 @@ a:hover {
  /* RESPONSIVIDADE */
  @media (min-width: 433px) and (max-width: 768px)  {
 
-   main {
-      height: auto;
-      justify-content: flex-start;
-   }
 
    .tabela {
       width: 70vw;
@@ -208,10 +205,7 @@ a:hover {
 
  @media (max-width: 432px) {
 
-   main {
-      height: auto;
-      justify-content: flex-start;
-   }
+
 
    h1 {
       font-size: 7vw;
