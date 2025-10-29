@@ -2,8 +2,8 @@ from flask import Flask, flash, render_template, redirect, url_for, request
 import mysql.connector
 from mysql.connector import errorcode
 from datetime import datetime
+import os
 
-DB_NAME = "todo_flask"
 
 criar_tabela = (
     """
@@ -15,14 +15,20 @@ criar_tabela = (
     """
 )
 
+# CREDENCIAIS DO RAILWAY
+DB_HOST = os.environ.get("MYSQLHOST")
+DB_USER = os.environ.get("MYSQLUSER")
+DB_PASSWORD = os.environ.get("MYSQLPASSWORD")
+DB_NAME = os.environ.get("MYSQL_DATABASE")
+
 
 # Conectando-se ao banco MySQL
 try:
     conexao = mysql.connector.connect(
-        user="root",
-        host="localhost",
-        password="",
-        database="todo_flask"
+        host=DB_HOST,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        database=DB_NAME
     )
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -125,4 +131,4 @@ def edit(id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
