@@ -15,20 +15,21 @@ criar_tabela = (
 )
 
 # CREDENCIAIS DO RAILWAY
-DB_HOST = os.environ.get("MYSQL_URL")
+DB_HOST = os.environ.get("MYSQLHOST")
 DB_USER = os.environ.get("MYSQLUSER")
 DB_PASSWORD = os.environ.get("MYSQLPASSWORD")
 DB_NAME = os.environ.get("MYSQL_DATABASE")
+DB_PORT = os.environ.get("MYSQLPORT")
 
 
 # Conectando-se ao banco MySQL
 try:
     conexao = mysql.connector.connect(
-        host="mainline.proxy.rlwy.net",
-        user="root",
-        password="SBKohIsjOuOidCTezvDWBPntlpvzPbBP",
-        database="railway",
-        port="43565"
+        host=DB_HOST,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        database=DB_NAME,
+        port=DB_PORT
     )
 
 except mysql.connector.Error as err:
