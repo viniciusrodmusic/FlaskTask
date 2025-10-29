@@ -25,7 +25,7 @@ DB_NAME = os.environ.get("MYSQL_DATABASE")
 # Conectando-se ao banco MySQL
 try:
     conexao = mysql.connector.connect(
-        host="mysql://root:SBKohIsjOuOidCTezvDWBPntlpvzPbBP@mysql.railway.internal:3306/railway",
+        host="mainline.proxy.rlwy.net",
         user="root",
         password="SBKohIsjOuOidCTezvDWBPntlpvzPbBP",
         database="railway"
