@@ -103,7 +103,7 @@ a:hover {
 }
 /* ESTILIZAÇÃO DOS FLASH MESSAGE */
  .info-msg {
-    position: sticky;
+    position: fixed;
     top: 10px;
     background-color: lightcoral; 
     outline: 1px solid darkred; 
@@ -115,7 +115,7 @@ a:hover {
  }
 
   .success-msg {
-    position: sticky;
+    position: fixed;
     top: 10px;
     background-color: lightgreen; 
     outline: 1px solid darkgreen; 

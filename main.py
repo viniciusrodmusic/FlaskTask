@@ -40,8 +40,6 @@ try:
         port=DB_PORT
     )
 
-
-
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
         print("Algo está errado com seu usuário ou senha")
