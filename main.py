@@ -3,7 +3,6 @@ import mysql.connector
 from mysql.connector import errorcode
 from datetime import datetime
 import os
-from time import sleep
 
 criar_tabela = (
     """
