@@ -16,19 +16,18 @@ Uma aplicação web para organização de tarefas construído com Flask e MySQL.
 ## Tecnologias Utilizadas
 
 - Python 3.x
-- Flask
+- Flask / Jinja2
 - MySQL (via XAMPP)
 - HTML/CSS
 - JavaScript
 
-## Estrutura do Projeto
+## Arquivos principais do projeto
 
 ```
 ToDoPessoal/
 ├── static/
 │   ├── script.js
-│   ├── style.css
-│   └── print.png
+│   └── style.css
 ├── templates/
 │   ├── base.html
 │   ├── edit.html
@@ -49,7 +48,7 @@ pip install flask mysql-connector-python
    - Host: localhost
    - Usuário: root
    - Senha: (vazia)
-   - Database: todo_flask
+   - Database: todo_flask (O código criará o banco se não existir)
 
 4. Execute o aplicativo:
 ```bash

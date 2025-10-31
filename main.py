@@ -4,6 +4,8 @@ from mysql.connector import errorcode
 from datetime import datetime
 import os
 
+criar_banco = ("CREATE DATABASE IF NOT EXISTS todo_flask;")
+
 criar_tabela = (
     """
     CREATE TABLE IF NOT EXISTS tarefas(
@@ -21,7 +23,9 @@ DB_PASSWORD = os.environ.get("MYSQLPASSWORD")
 DB_NAME = os.environ.get("MYSQL_DATABASE")
 DB_PORT = os.environ.get("MYSQLPORT")
 
-# VIA XAMPP
+# Conectando-se ao banco MySQL
+
+# Via XAMPP
 # try:
 #     conexao = mysql.connector.connect(
 #         host="localhost",
@@ -30,7 +34,7 @@ DB_PORT = os.environ.get("MYSQLPORT")
 #         database="todo_flask",
 #     )
 
-# Conectando-se ao banco MySQL
+# Via Railway (Hospedado em: https://web-production-e9d2.up.railway.app/) - Para testar localmente utilize a conexão acima
 try:
     conexao = mysql.connector.connect(
         host=DB_HOST,
@@ -48,10 +52,9 @@ except mysql.connector.Error as err:
 
 
 cursor = conexao.cursor()
+cursor.execute(criar_banco)
 cursor.execute(criar_tabela)
 cursor.close()
-
-
 
 
 
